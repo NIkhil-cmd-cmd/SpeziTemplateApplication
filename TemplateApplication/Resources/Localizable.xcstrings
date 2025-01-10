@@ -1,6 +1,22 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "%lld / %lld steps" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld / %2$lld steps"
+          }
+        }
+      }
+    },
+    "%lld steps" : {
+
+    },
+    "%lld steps/day" : {
+
+    },
     "ACCOUNT_SETUP_DESCRIPTION" : {
       "localizations" : {
         "en" : {
@@ -41,6 +57,9 @@
         }
       }
     },
+    "Average" : {
+
+    },
     "Close" : {
       "localizations" : {
         "en" : {
@@ -80,6 +99,18 @@
           }
         }
       }
+    },
+    "Cumulative Steps" : {
+
+    },
+    "Daily Step Distribution" : {
+
+    },
+    "Dashboard" : {
+
+    },
+    "Date" : {
+
     },
     "Grant Access" : {
       "localizations" : {
@@ -231,6 +262,9 @@
         }
       }
     },
+    "Monthly Overview" : {
+
+    },
     "Next" : {
       "localizations" : {
         "en" : {
@@ -280,6 +314,9 @@
           }
         }
       }
+    },
+    "Progress to Goal" : {
+
     },
     "Schedule" : {
       "localizations" : {
@@ -341,6 +378,9 @@
         }
       }
     },
+    "Steps" : {
+
+    },
     "Swift Package Manager" : {
       "localizations" : {
         "en" : {
@@ -371,6 +411,9 @@
         }
       }
     },
+    "Today" : {
+
+    },
     "Unsupported Event" : {
       "localizations" : {
         "en" : {
@@ -380,6 +423,12 @@
           }
         }
       }
+    },
+    "Week" : {
+
+    },
+    "Weekly Comparison" : {
+
     },
     "WELCOME_AREA1_DESCRIPTION" : {
       "localizations" : {
