@@ -37,6 +37,7 @@ struct DashboardView: View {
             .navigationTitle("Dashboard")
             .task {
                 await loadStepData()
+                startObservingStepData()
             }
         }
     }
@@ -189,6 +190,30 @@ struct DashboardView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
         .background(RoundedRectangle(cornerRadius: 12).fill(Color.gray.opacity(0.1)))
+    }
+    
+    private func startObservingStepData() {
+        let stepType = HKQuantityType(.stepCount)
+        
+        let query = HKObserverQuery(sampleType: stepType, predicate: nil) { [self] _, completionHandler, error in
+            if let error = error {
+                print("Error observing step data: \(error)")
+                return
+            }
+            
+            Task {
+                await loadStepData()
+            }
+            
+            completionHandler()
+        }
+        
+        healthStore.execute(query)
+        healthStore.enableBackgroundDelivery(for: stepType, frequency: .immediate) { success, error in
+            if let error = error {
+                print("Error enabling background delivery: \(error)")
+            }
+        }
     }
     
     private func loadStepData() async {
